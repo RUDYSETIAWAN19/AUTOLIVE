@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #E6F0FA;
+  --bg-card: #FFFFFF;
+  --text-primary: #1E3A8A;
+  --text-secondary: #3B82F6;
+  --primary: #3B82F6;
+  --primary-dark: #2563EB;
+}
+
+.dark {
+  --bg-primary: #0F172A;
+  --bg-card: #1E293B;
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --primary: #E63946;
+  --primary-dark: #C72A3E;
+}
+
+@layer base {
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s, color 0.3s;
+  }
+}
+
+@layer components {
+  .card {
+    background-color: var(--bg-card);
+    border-radius: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
+  .btn-primary {
+    background-color: var(--primary);
+    color: white;
+    transition: background-color 0.2s;
+  }
+  .btn-primary:hover {
+    background-color: var(--primary-dark);
+  }
+}
